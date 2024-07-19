@@ -1,4 +1,5 @@
 var numerosAdicionados = [];
+var resultado = document.getElementById("resultado");
 
 function adicionaNumero() {
     let campoNumero = document.getElementById("numero");
@@ -7,21 +8,14 @@ function adicionaNumero() {
     if (numeroDigitado.length > 0) {
         if (numeroDigitado > 0 && numeroDigitado < 100) {
             numerosAdicionados.push(numeroDigitado);
-            numeros.innerHTML += `${numeroDigitado}\n`;
+            numeros.innerHTML += `O valor ${numeroDigitado} foi adicionado!\n`;
+            resultado.innerHTML = "";
         } else {
-            exibeMensagemErro("Digite algum número entre 1 e 100!");
+            resultado.innerHTML = "Digite algum número entre 1 e 100!";
         }
     } else {
-        exibeMensagemErro("Digite algum número!");
+        resultado.innerHTML = "Digite algum número!";
     }
-}
-
-function exibeMensagemErro(mensagem) {
-    let divisaoResultado = document.getElementById("resultado");
-    let paragrafoMensagemErro = document.createElement("p");
-    let mensagemErro = document.createTextNode(mensagem);
-    paragrafoMensagemErro.appendChild(mensagemErro);
-    divisaoResultado.appendChild(paragrafoMensagemErro);
 }
 
 var botao = document.getElementById("botao");
