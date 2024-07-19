@@ -4,11 +4,25 @@ function adicionaNumero() {
     let campoNumero = document.getElementById("numero");
     let numeroDigitado = campoNumero.value;
     let numeros = document.getElementById("numeros");
-    console.log(numeros);
-    numerosAdicionados.push(numeroDigitado);
-    numeros.innerHTML += `${numeroDigitado}\n`;
+    if (numeroDigitado.length > 0) {
+        if (numeroDigitado > 0 && numeroDigitado < 100) {
+            numerosAdicionados.push(numeroDigitado);
+            numeros.innerHTML += `${numeroDigitado}\n`;
+        } else {
+            exibeMensagemErro("Digite algum número entre 1 e 100!");
+        }
+    } else {
+        exibeMensagemErro("Digite algum número!");
+    }
+}
+
+function exibeMensagemErro(mensagem) {
+    let divisaoResultado = document.getElementById("resultado");
+    let paragrafoMensagemErro = document.createElement("p");
+    let mensagemErro = document.createTextNode(mensagem);
+    paragrafoMensagemErro.appendChild(mensagemErro);
+    divisaoResultado.appendChild(paragrafoMensagemErro);
 }
 
 var botao = document.getElementById("botao");
-console.log(botao);
 botao.addEventListener("click", adicionaNumero);
