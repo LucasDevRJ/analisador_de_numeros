@@ -10,6 +10,14 @@ body {
     font-size: 2.5rem;
 }
 
+label, p {
+    font-size: 1.2rem;
+}
+
+.mensagem-erro {
+    color: #FF0000;
+}
+
 .divisao-numeros, .divisao-resultado {
     width: 50%;
     padding: 30px;

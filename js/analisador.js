@@ -3,6 +3,7 @@ var resultado = document.getElementById("resultado");
 var botaoAdicionar = document.getElementById("botaoAdicionar");
 var botaoCalcular = document.getElementById("botaoCalcular");
 var resultadosExibidos = false;
+var valorValido = false;
 
 botaoAdicionar.onclick = function adicionaNumero() {
     if (resultadosExibidos) {
@@ -18,6 +19,7 @@ botaoAdicionar.onclick = function adicionaNumero() {
                 numerosAdicionados.push(numeroDigitado);
                 numeros.innerHTML += `O valor ${numeroDigitado} foi adicionado!\n`;
                 resultado.innerHTML = "";
+                valorValido = true;
             } else {
                 resultado.innerHTML = "Número já adicionado!";
             }
@@ -27,6 +29,7 @@ botaoAdicionar.onclick = function adicionaNumero() {
     } else {
         resultado.innerHTML = "Digite algum número!";
     }
+
     campoNumero.value = "";
 }
 
@@ -52,6 +55,7 @@ botaoCalcular.onclick = function calcularNumeros() {
     
         media = soma / quantidadeTotalDeNumeros;
     
+        resultado.classList.remove("mensagem-erro");
         resultado.innerHTML = `São ${quantidadeTotalDeNumeros} números cadastrados.<br>`;
         resultado.innerHTML += `O maior valor digitado foi ${maiorValorDigitado}.<br>`;
         resultado.innerHTML += `O menor valor digitado foi ${menorValorDigitado}.<br>`;
@@ -61,4 +65,8 @@ botaoCalcular.onclick = function calcularNumeros() {
     } else {
         resultado.innerHTML = "Adicione valores!";
     }
+}
+
+if (!valorValido) {
+    resultado.classList.add('mensagem-erro');
 }
