@@ -5,11 +5,18 @@ body {
     align-items: center;
 }
 
+.titulo {
+    color: #FFFFFF;
+    font-size: 2.5rem;
+}
+
 .divisao-numeros, .divisao-resultado {
+    width: 50%;
+    padding: 30px;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px 0;
     background-color: #FFFFE0;
-    width: 50%;
 }
