@@ -37,7 +37,7 @@ textarea {
 }
 
 #botaoCalcular {
-    width: 8vw;
+    width: 10vw;
     height: 7vh;
     background-color: #FA8072;
     border-width: 2px;
@@ -46,7 +46,11 @@ textarea {
     border-color: #BC8F8F;
     cursor: pointer;
     color: #FFFFE0;
-    transition: 1s;
+}
+
+#botaoCalcular:active {
+    color: #FFFF00;
+    border-color: #FFFF00;
 }
 
 #botaoCalcular:hover {
@@ -65,7 +69,13 @@ textarea {
 }
 
 @media (max-width: 768px) { 
-    
+    .divisao-numeros, .divisao-resultado {
+        width: 90%;
+    }
+
+    #botaoCalcular {
+        width: 20vw;
+    }
 }
 
 @media (max-width: 480px) {
