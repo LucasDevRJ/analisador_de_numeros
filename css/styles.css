@@ -63,3 +63,30 @@ textarea {
     gap: 20px 0;
     background-color: #FFFFFF;
 }
+
+@media (max-width: 768px) { 
+    
+}
+
+@media (max-width: 480px) {
+    .titulo {
+        color: #FFFFFF;
+        font-size: 1.8rem;
+    }
+
+    .divisao-numeros, .divisao-resultado {
+        width: 90%;
+    }
+
+    .divisao-numero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px 0;
+    }
+
+    #botaoCalcular {
+        width: 30vw;
+    }
+}
