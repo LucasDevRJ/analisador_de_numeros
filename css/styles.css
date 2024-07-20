@@ -68,6 +68,11 @@ textarea {
     background-color: #FFFFFF;
 }
 
+.autoria {
+    color: #FFFFFF;
+    font-size: 1rem;
+}
+
 @media (max-width: 768px) { 
     .divisao-numeros, .divisao-resultado {
         width: 90%;
