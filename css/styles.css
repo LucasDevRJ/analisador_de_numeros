@@ -22,6 +22,14 @@ label, p {
     padding: 6px 5px;
 }
 
+.entrada:focus {
+    background-color: #FFFACD;
+}
+
+textarea {
+    background-color: #FFFACD;
+}
+
 .botao {
     font-size: 0.9rem;
     font-weight: bold;
@@ -53,5 +61,5 @@ label, p {
     flex-direction: column;
     align-items: center;
     gap: 20px 0;
-    background-color: #FFFFE0;
+    background-color: #FFFFFF;
 }
