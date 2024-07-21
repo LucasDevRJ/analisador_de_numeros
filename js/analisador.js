@@ -59,7 +59,7 @@ botaoCalcular.onclick = function calcularNumeros() {
         resultado.innerHTML = `São ${quantidadeTotalDeNumeros} números cadastrados.<br>`;
         resultado.innerHTML += `O maior valor digitado foi ${maiorValorDigitado}.<br>`;
         resultado.innerHTML += `O menor valor digitado foi ${menorValorDigitado}.<br>`;
-        resultado.innerHTML += `A soma de todos os valores é ${soma}.<br>`;
+        resultado.innerHTML += `A soma dos valores é ${soma}.<br>`;
         resultado.innerHTML += `A média dos valores é ${media.toFixed(2)}.`;
         resultadosExibidos = true;
     } else {
